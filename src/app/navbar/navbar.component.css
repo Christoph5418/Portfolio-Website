@@ -1,0 +1,134 @@
+
+body{
+    color: var(--text-color);
+    overflow-x: hidden;
+    position: fixed;
+
+}
+
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 12%;
+    transition: all .50s ease;
+    /* background: #0d0b0b; */
+    height: 8vh;
+    background-color: rgb(7,7,21, .85);
+    backdrop-filter: blur(15px);
+    padding-bottom: 28px;
+
+}
+
+.logo {
+    width: 60px;
+    transform: translateX(-40px);
+}
+
+
+.logo:hover{
+    color: darkorange;
+    transition: all .50s ease;
+    cursor: pointer;
+
+}
+.logo i{
+    color: var(--main-color);
+    font-size: 28px;
+    margin-right: 3px;
+}
+
+.logo span{
+    color: var(--text-color);
+    font-size: 1.3rem;
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar label{
+    color: var(--text-color);
+    font-size: 1.3vw;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0 30px;
+    transition: all .50s ease;
+}
+
+.navbar a{
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0 30px;
+    transition: all .50s ease;
+}
+
+.navbar label:hover{
+    color: gray;
+    cursor: pointer;
+}
+
+
+
+.navbar a:hover{
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.fa-github {
+    font-size: 2vw;
+    transition: .5s;
+    margin-right: 10px;
+  }
+
+
+.fa-github:hover{
+    cursor: pointer;
+    color: rgb(161, 1, 161); 
+}
+
+.fa-linkedin {
+    font-size: 2vw;
+    color: white;
+    transition: .5s;
+    margin-left: 10px;
+  }
+
+  .fa-linkedin:hover{
+    cursor: pointer;
+    color: rgb(73, 73, 253); 
+  }
+
+  a{
+    text-decoration: none;
+    color: white
+  }
+
+  @media(max-width: 675px){
+    .navbar{
+        display: none;
+    }
+
+    .logo{
+        transform: translateX(-10px);
+    }
+    
+    .fa-github{
+        font-size: 2rem;
+    }
+    .fa-linkedin{
+        font-size: 2rem;
+    }
+
+    
+    
+  }
+

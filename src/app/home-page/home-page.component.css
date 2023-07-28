@@ -1,0 +1,667 @@
+body{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+}
+
+.image-container {
+  width: 100%;
+  position: relative;
+}
+
+.image-container img {
+  max-width: 100%;
+  object-fit: contain;
+  min-width: 400px;
+}
+
+.image-container .text-overlay label{
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-color);
+  /* font-size: 110px; */
+  font-size: 7.6vw;
+}
+
+.image-container .text-overlay p{
+  position: absolute;
+  top: 62.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-color);
+  font-size: 2vw;
+}
+
+.gradient-rectangle {
+  height: 200px;
+  width: 120vw; /* Set width to match the screen */
+  background: linear-gradient(to bottom, 
+  rgb(42, 18, 20) 0%,
+  rgb(30, 13, 20) 33%,
+  rgb(20, 10, 20) 66%,
+  rgb(7, 7, 21) 100%
+); 
+filter: blur(3px);
+  transform: translateX(-50px);
+}
+
+.gradient-blur{
+  transform: translateY(-20px);
+  filter: blur(5px);
+}
+
+
+.expertise{
+  color: white;
+  text-align: center;
+  align-items: center;
+}
+
+.expertise h1{
+  font-size: 5vw;
+
+}
+
+.expertise-cards{
+  display: flex;
+  flex-direction: row;
+  margin-left: 12%;
+  margin-right: 12%;
+}
+
+.expertise-card:nth-child(1){
+  flex: 1;
+  min-height: 360px;
+  border: 3px solid gray;
+  border-radius: 10px;
+}
+
+.expertise-card:nth-child(2){
+  flex: 1;
+  min-height: 360px;
+  border: 3px solid gray;
+  border-radius: 10px;
+
+  margin-left: 15px;
+  margin-right: 15px;
+
+} 
+  .expertise-card:nth-child(3){
+  flex: 1;
+  min-height: 360px;
+  border: 3px solid gray;
+
+  border-radius: 10px;
+}
+
+
+.expertise-cards .top{
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.top{
+  margin-left: 10px;
+}
+
+.top label{
+  text-align: left;
+  font-size: 1.9vw;
+}
+
+.top i{
+  margin: 20px;
+  font-size: 3vw;
+  color: white
+}
+
+.bottom{
+  margin-right: 25px;
+  margin-left: 15px;
+}
+
+.bottom p{
+  text-align: left;
+  font-family: 'Courier New', Courier, monospace;
+  color: gray;
+  margin-bottom: -10px;
+  margin-top: -10px
+}
+
+.bottom label{
+  font-size: 1.3vw;
+  margin-right: 30px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.bottom-text{
+  border-left: .25px solid gray;
+  margin-left: 12.5px;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 7.5px;
+}
+
+@keyframes background-pan {
+from{
+  background-position: 0% center;
+}
+
+to{
+  background-position: -200% center;
+}
+}
+
+label > .magic{
+  animation: background-pan 3s linear infinite;
+
+  background: linear-gradient(
+    to right,
+    violet,
+    purple,
+    violet
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+label > .magic1{
+  animation: background-pan 3s linear infinite;
+
+  background: linear-gradient(
+    to right,
+    orange,
+    red,
+    orange
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+label > .magic2{
+  animation: background-pan 3s linear infinite;
+
+  background: linear-gradient(
+    to right,
+    green,
+    yellow,
+    green
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+label > .magic3{
+  animation: background-pan 3s linear infinite;
+
+  background: linear-gradient(
+    to right,
+    violet,
+    orange,
+    violet
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.code-background{
+  text-align: center;
+}
+
+.code-image{
+  position: relative;
+  transform: scale(.75);
+  top: -75px;
+  opacity: .25;
+  z-index: -1;
+}
+
+
+
+.project-header{
+  color: white;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 5vw;
+
+}
+
+.projects{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#cards{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  max-width: 916px;
+  width: calc(100% - 20px)
+}
+.card{
+  background-color: rgba(255, 255, 255, .02);
+  border: 1px solid rgba(255, 255, 255, .05);
+  height: 260px;
+  width: 300px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.card::before{
+  /* background: radial-gradient(
+    800px circle at 100px 100px, rgba(255, 255, 255, .06), transparent 40%
+  ) ; */
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+
+.card .top-part img{
+  position: relative;
+  width: 225px;
+  transform: translateY(15px);
+}
+
+.card .bottom-part{
+  transform: translateY(30px);
+  color: white;
+}
+
+.bottom-part label{
+  font-size: 22px;
+}
+.bottom-part p{
+  font-size: 14px;
+}
+
+.surround{
+  transition: ease .5s;
+}
+.surround:hover{
+  transform: scale(1.03);
+}
+
+
+#mirna{
+  max-width: 165px;
+  transform: translateY(2px);
+}
+
+.mirnas{
+  transform: translateY(34px);
+}
+
+#stock{
+  max-width: 110px;
+  margin-top: 15px;
+}
+
+#stock1{
+  max-width: 55px;
+  transform: translateY(-5px);
+}
+
+#psu{
+  width: 135px;
+  transform: translateY(4px);
+}
+
+#iphone{
+  max-height: 300px;
+  max-width: 75px;
+  margin-top: 15px;
+}
+
+
+
+.portfolio{
+  transform: translateY(-11px);
+}
+
+.portfolio #iphone{
+  transform: translateY(24px);
+}
+
+.move{
+  transform: translateY(53px);
+}
+
+.move1{
+  transform: translateY(35px);
+}
+
+.experiences{
+  display: flex;
+  justify-content: center;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+}
+
+#open{
+  position: absolute;
+  right: 4%;
+  transform: scale(1.5);
+}
+
+
+
+
+.collapsible{
+  max-width: 800px;
+  overflow: hidden;
+  font-weight: 500;
+}
+
+.collapsible input {
+  display: none;
+}
+
+.collapsible label{
+  position: relative;
+  font-weight: 600;
+  background: linear-gradient(to right, #4B0082, #8A2BE2);
+
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+  color: white;
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 6px;
+  z-index: 2;
+  opacity: 1;
+}
+
+.collapsible label:after{
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 18px;
+  height: 18px;
+}
+
+.collapsible-text{
+  max-height: 1px;
+  overflow: hidden;
+  border-radius: 8px;
+  line-height: 1.4;
+  position: relative;
+  top: -100%;
+  opacity: .5;
+  transition: all .6s ease;
+}
+
+
+.collapsible input:checked ~ .collapsible-text{
+  max-height: 220px;
+  padding-bottom: 25px;
+  background-color: rgba(133, 88, 255, 0.134);
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+  opacity: 1;
+  top: 0;
+}
+
+.collapsible-text h2{
+  margin-bottom: 10px;
+  padding: 15px 15px 0;
+  color: lightgray;
+  transform: scale(.75);
+  margin-left: -13.75%;
+}
+
+.collapsible-text p{
+  padding-left: 15px;
+  padding-right: 15px;
+  color: lightgray;
+}
+
+
+.experience-header{
+  text-align: center;
+  color: white;
+  font-size: 5vw;
+
+}
+
+
+
+#date{
+  position: absolute;
+  right: 8%;
+}
+
+.collapsible-text i{
+  margin-right: 10px;
+}
+
+
+.experience-box{
+  display: flex;
+  padding: 15px;
+}
+
+.experience-box p {
+  width: 80%;
+  transform: translateX(-13px);
+}
+
+#bayer{
+  width: 100px;
+  transform: translateY(-20px);
+  margin-left: 10px;
+}
+
+.experience-skills{
+  display: flex;
+  flex-wrap: wrap;
+  transform: translate(15px, -12.5px);
+}
+
+.experience-skills p{
+  border-radius: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 4.5px;
+  padding-bottom: 4.5px;
+  background-color: rgba(89, 89, 255, .5);
+  font-family: monospace;
+  margin-right: 20px;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+
+  @media(max-width: 970px){
+    .expertise-cards{
+      margin-left: 3.5%;
+      margin-right: 3.5%;
+    }
+  }
+
+  @media(max-width: 1178px){
+    .bottom label{
+      font-size: 15px;
+    }
+  }
+  
+  @media(max-width: 675px){
+    .image-container .text-overlay label{
+      font-size: 55px;
+      font-weight: bold;  
+      width: 100%;
+      text-align: center;
+    }
+
+    .image-container .text-overlay p{
+      font-size: 20px;
+      font-weight: bold;  
+      width: 100%;
+      text-align: center;
+    }
+
+    body{
+      transform: translateY(-40px);
+    }
+
+    .gradient-blur{
+      transform: translateY(-80px);
+
+    }
+
+    .expertise-cards{
+      flex-direction: column;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    .expertise-card:nth-child(1){
+      flex: 1;
+      height: 290px;
+      border: 3px solid gray;
+      margin-top: 10px;
+
+    }
+  
+    .expertise-card:nth-child(2){
+      flex: 1;
+      height: 290px;
+      border: 3px solid gray;
+
+      margin-top: 10px;
+
+  
+    }  .expertise-card:nth-child(3){
+      flex: 1;
+      height: 290px;
+      border: 3px solid gray;
+      margin-top: 10px;
+
+    }
+
+    .expertise-cards .top{
+      margin-top: 10px
+    }
+
+    .top label{
+      text-align: left;
+      font-size: 25px;
+    }
+  
+    .top i{
+      margin: 30px;
+      font-size: 40px;
+      color: white
+    }
+
+    .top{
+      margin-left: 0px;
+      margin-right: 15px;
+    }
+
+
+
+
+
+  .expertise-card:nth-child(2){
+    margin-left: 0;
+    margin-right: 0;
+  } 
+
+  .expertise h1{
+    font-size: 50px;
+
+  }
+
+  .code-background img{
+    left: -145px;
+  }
+
+  .project-header{
+
+    font-size: 50px;
+
+  }
+
+  .collapsible input:checked ~ .collapsible-text{
+    max-height: 600px;
+
+  }
+
+  #bayer{
+    max-width: 100px;
+    max-height: 100px;
+    transform: translate(8px, 17.5px);
+  }
+
+  .experience-box p{
+    width: 750px;
+  }
+
+  h2{
+    margin-top: 20px;
+  }
+
+  .experience-skills{
+    transform: translate(15px, -2.5px);
+  }
+
+  #date{
+    right: 12%;
+  }
+
+  #open{
+    right: 5%;
+  }
+  
+
+  .experience-header{
+
+    font-size: 37.5px;
+
+  }
+
+  .bottom-text label{
+    font-size: 18px;
+  }
+
+  .expertise-card:nth-child(1){
+    min-height: 322.5px;
+  }
+  
+  .expertise-card:nth-child(2){
+    min-height: 322.5px;
+  } 
+    .expertise-card:nth-child(3){
+    min-height: 322.5px;
+  }
+
+}

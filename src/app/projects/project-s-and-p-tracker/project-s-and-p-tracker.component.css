@@ -1,0 +1,215 @@
+
+body{
+    transform: translateY(150px);
+    color: var(--text-color);
+    height: fit-content;
+}
+
+.project-name{
+    margin-left: 7.3%;
+    font-size: 30px;
+    max-width: 40%;
+}
+
+.project-name p{
+    font-size: 15px;
+    color: gray
+}
+
+.word-spacing{
+    word-spacing: .75em;
+}
+
+.description{
+    margin-left: 7.3%;
+    margin-right: 7.3%;
+    display: flex;
+    color: lightgray;
+}
+
+.info{
+    position: relative;
+    width: 50%;   
+    line-height: 27px;
+ 
+}
+
+.other{
+    margin-left: 10%;
+    position: relative;
+    width: 50%;
+    display: flex;
+    margin-top: 20px;
+}
+
+.client{
+    width: 125px;
+    padding-top: 15px;
+    border-top: 1px solid gray;
+}
+
+.technology{
+    margin-left: 50px;
+    padding-top: 15px;
+    border-top: 1px solid gray;
+    width: 135px;
+}
+
+.client label{
+    color: white;
+}
+
+.technology label{
+    color: white;
+}
+
+.client p, .technology p{
+    font-family: 'Sora', sans-serif;
+    line-height: 30px;
+
+}
+
+.open{
+    width: 400px;
+}
+
+.client i{
+    margin-left: 10px;
+}
+
+a{
+    color: white;
+    transition: .5s;
+}
+
+a:hover{
+    color: gray;
+}
+
+.next-project{
+    position: fixed;
+    width: 250px;
+    background-color: white;
+    border-radius: 10px;
+    height: 115px;
+    text-align: center;
+    right: 3%;
+    bottom: 5%;
+    justify-content: left;
+    align-items: center;
+    display: flex; /* Add this line */
+    align-items: center; /* Add this line */
+    border: 1px solid black
+}
+
+.project-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.next-project label{
+    color: black;
+    font-family: 'Sora', sans-serif;
+
+}
+
+.line {
+    display: flex;
+    align-items: center;
+}
+
+#left{
+    margin-left: 25px;
+    transition: .5s;
+}
+#right{
+    margin-left: 25px;
+    transition: .5s;
+}
+
+.line{
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+#left:hover, #right:hover{
+    cursor: pointer;
+    color: gray;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    transform: translateY(150px);
+  }
+  
+.image {
+    width: 90%;
+    margin-bottom: 1%;
+  }
+
+  #next{
+    transform: translateX(-42px);
+}
+
+@media(max-width: 675px){
+    .project-name{
+        font-size: 20px;
+        max-width: 90%;
+    }
+
+    .description{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info{
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .other{
+        width: 100%;
+    }
+
+    .client{
+        width: 40%;
+        transform: translateX(-35px);
+    }
+
+    .technology{
+        width: 40%;
+        transform: translateX(-10px);
+    }
+
+    .images{
+        justify-content: center;
+        align-items: center;
+        transform: translateY(40px);
+    }
+
+    .next-project{
+        width: 175px;
+        height: 85px;
+    }
+
+    .project-info label{
+        font-size: 12px;
+    }
+    #left, #right{
+        font-size: 12px;
+        margin-left: 20px;
+    }
+
+    .next-project{
+        transform: translateY(20px);
+    }
+
+    .next-project{
+        display: none;
+    }
+
+  }
